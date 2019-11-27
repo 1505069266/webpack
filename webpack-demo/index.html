@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title><%=htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <script src='./dist/js/bundle.js'></script>
+    
+        <h1><%=htmlWebpackPlugin.options.date%></h1>
+        <% for (let key in htmlWebpackPlugin) {%>
+            <p><%=key%></p>
+        <%}%>
+        <% for (let key in htmlWebpackPlugin.files) {%>
+            <p><%=key%></p>
+        <%}%>
+        <% for (let key in htmlWebpackPlugin.options) {%>
+            <p><%=key%></p>
+        <%}%>
+        <!-- 我说注释 -->
 </body>
 </html>
